@@ -13,18 +13,16 @@ body {
   width: 100%;
   height: 100vh;
   display: grid;
+  grid: 100px repeat(2, 1fr) 100px / 10vw 1fr 10vw;
   grid-template-areas:
-    "sectionHeader sectionHeader sectionHeader"
+    ". sectionHeader ."
     ". sectionOne ."
     ". sectionTwo ."
     ". sectionFooter .";
-  grid: 100px repeat(2, 1fr) 100px / 10vw 1fr 10vw;
 }
-/* ========= */
+
 /* BODY GRID */
-/* ========= */
-.. {
-}
+
 .sectionHeader {
   grid-area: "sectionHeader";
   background: rgba(150, 150, 150, 0.5);
@@ -39,15 +37,18 @@ body {
   grid-area: "sectionFooter";
   background: rgba(150, 150, 150, 0.5);
 }
-/* ========== */
-/* ========== */
 
-/* Header */
+/* HEADER */
+
+.menu-list {
+  min-width: 500px;
+}
 
 .menu-item {
   display: inline-block;
   list-style: none;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 2rem;
   padding: 0 1rem;
 }
 
@@ -62,7 +63,40 @@ a:active {
   color: #333;
 }
 
-a:focus {
+/* SECTION ONE */
+
+/* SECTION TWO */
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
-/* header-end */
+.footer-item {
+  max-width: 130px;
+  padding: 1em 0.5em;
+  margin: 0 2em;
+  color: #999;
+  text-align: center;
+  border: 2px solid rgba(153, 153, 153, 0.6);
+  border-radius: 15px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 500px) {
+  .menu-list {
+    min-width: 420px;
+  }
+
+  .menu-item {
+    font-size: 1.5rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+}
