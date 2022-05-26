@@ -226,9 +226,8 @@ a:active {
   .menu-list {
     min-width: 420px;
   }
-
   .menu-item {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   footer p {
