@@ -18,7 +18,7 @@ body {
     ". sectionOne ."
     ". sectionTwo ."
     ". sectionFooter .";
-  justify-content: center;
+  justify-content: left;
   align-items: top;
 }
 
@@ -41,6 +41,12 @@ body {
 .footer {
   background: rgba(150, 150, 150, 0.5);
 }
+.sectionOne,
+.sectionTwo {
+  margin: 0.5em 0;
+  padding: 15px;
+  background: rgba(150, 150, 150, 0.2);
+}
 
 /* Utilities */
 
@@ -50,10 +56,6 @@ img {
 
 /* HEADER */
 
-.logo-container {
-  width: 100%;
-}
-
 .menu-list {
   min-width: 500px;
 }
@@ -62,8 +64,8 @@ img {
   display: inline-block;
   list-style: none;
   font-weight: 500;
-  font-size: 2rem;
-  padding: 0 1rem;
+  font-size: 1.6rem;
+  padding: 1rem;
 }
 
 a:link,
@@ -84,7 +86,70 @@ a:active {
   place-content: center;
   grid: 100px 90px 25px 25px 100px 100px 80px / repeat(4, 1fr);
   gap: 15px;
-  padding: 15px 0;
+}
+
+.bg-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.img5,
+.img6,
+.img7,
+.img8 {
+  background-position-x: 0;
+}
+
+.img1 {
+  background-image: url(./images/1.jpg);
+  grid-row: 1;
+  grid-column: 1;
+}
+.img2 {
+  background-image: url(./images/2.jpg);
+  grid-row: 1 / 3;
+  grid-column: 2;
+}
+.img3 {
+  background-image: url(./images/3.jpg);
+  grid-row: 1/5;
+  grid-column: 3;
+}
+.img4 {
+  background-image: url(./images/4.jpg);
+  grid-row: 1/4;
+  grid-column: 4;
+}
+.img5 {
+  background-image: url(./images/5.jpg);
+  grid-row: 2/6;
+  grid-column: 1;
+}
+.img6 {
+  background-image: url(./images/6.jpg);
+  grid-row: 3/7;
+  grid-column: 2;
+}
+.img7 {
+  background-image: url(./images/7.jpg);
+  grid-row: 5/8;
+  grid-column: 3;
+}
+.img8 {
+  background-image: url(./images/8.jpg);
+  grid-row: 4/8;
+  grid-column: 4;
+}
+.img9 {
+  background-image: url(./images/9.jpg);
+  grid-row: 6/8;
+  grid-column: 1;
+}
+.img10 {
+  background-image: url(./images/10.jpg);
+  grid-row: 7;
+  grid-column: 2;
 }
 
 /* SECTION TWO */
@@ -94,7 +159,6 @@ a:active {
   place-content: center;
   grid: repeat(3, 1fr) / repeat(3, 1fr);
   gap: 5px;
-  padding-bottom: 5px;
 }
 
 /* FOOTER */
